@@ -13,13 +13,6 @@
 > [!TIP]
 > **TL;DR** — As a writer for deep daiv.'s weekly newsletter *위클리 딥 다이브* (Mar 2025 – Jan 2026), Jiheon published **9 issues** under the pen name **에디터 져니 ("Editor Journey")**. Most take one or two recent papers — full-duplex speech LMs, missing modalities, LVLM hallucination, LLaVA, video temporal grounding, SynthID watermarking, attention sinks — and explains them with everyday analogies. Six Notion drafts are archived here.
 
-<details>
-<summary><b>🇰🇷 한국어 요약</b></summary>
-
-deep daiv. 콘텐츠팀의 주간 뉴스레터 「위클리 딥 다이브」에 "에디터 져니"라는 필명으로 2025년 3월부터 2026년 1월까지 9편을 기고했습니다. 매 호마다 최신 논문 한두 편을 골라, 전공자가 아닌 독자도 이해할 수 있게 일상적인 비유로 풀어냈습니다. 예를 들어 멀티모달 AI의 환각은 "목격자 진술"에, 정보가 빠진 입력은 "고요 속의 외침" 게임에 빗대어 설명했습니다. 주제는 음성 대화 AI(Full-Duplex), 누락 모달리티, 시각-언어 모델의 환각과 측정법, LLaVA 구조, 비디오 구간 탐색(VTG), AI 생성 이미지 워터마킹(SynthID), 어텐션 싱크까지 주로 멀티모달 AI의 흐름을 다룹니다. 여러 편은 직접 수행한 연구(비디오 구간 탐색 논문, 환각 연구)나 프로젝트(추천 시스템)와 맞닿아 있습니다. 아래 표에서 발행본 링크와 Notion 초안 아카이브를 볼 수 있습니다.
-
-</details>
-
 | | |
 |---|---|
 | **Period** | 26 Mar 2025 (#84) – 7 Jan 2026 (#125) |

@@ -15,13 +15,6 @@
 > [!TIP]
 > **TL;DR** — *deep daiv. vol.0* (first edition 10 Dec 2024) is the club's AI magazine for newcomers, in three parts: getting ready to dive in, swimming in the world of AI, and diving deeper. Jiheon worked on it as an **AI Magazine Editor (Aug – Dec 2024)** and is credited among its six writers; the excerpt here holds his three pieces — a concept primer (pp. 12–25), an interview with a NAVER search executive (pp. 52–57) and a first-coding guide (pp. 106–119).
 
-<details>
-<summary><b>🇰🇷 한국어 요약</b></summary>
-
-deep daiv. 매거진 vol.0(2024년 12월 10일 초판)은 인공지능을 처음 접하는 사람을 위한 동아리 잡지로, "뛰어들 준비 → 헤엄치기 → 빠져들기"의 세 파트로 구성됩니다. 강지헌은 2024년 8월부터 12월까지 매거진 에디터로 참여했고, 판권면의 필진(글) 여섯 명 중 한 명으로 올라 있습니다. 여기 올린 발췌본에는 에디터 "져니"로 쓴 세 편이 담겨 있습니다. 「인공지능 입문을 위한 필수 개념 총정리」는 프로그래밍 언어부터 머신러닝·딥러닝, 지도/비지도/강화 학습, DNN·RNN·CNN·트랜스포머·YOLO까지 한 번에 정리하고, 「INTERVIEW: 우리만이 할 수 있는 AI」는 네이버 검색 분야 책임리더와의 인터뷰, 「첫 코딩은 계획대로 될 거야!」는 AI 개발을 요리에 빗대어 개발 환경 → 데이터 → 프레임워크 → 참고 사이트 순으로 안내합니다. 비유하자면 수영을 처음 배우는 사람에게 물의 성질(개념), 현역 선수의 이야기(인터뷰), 첫 입수 요령(코딩 가이드)을 차례로 건네는 구성입니다.
-
-</details>
-
 | | |
 |---|---|
 | **Period** | Aug – Dec 2024 (first edition printed 10 Dec 2024) |

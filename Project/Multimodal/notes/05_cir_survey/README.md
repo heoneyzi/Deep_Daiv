@@ -5,13 +5,6 @@
 > [!NOTE]
 > **Reading list (Dec 2024, notes in Korean)** — eight paper notes on composed image retrieval (CIR: retrieve an image from a reference image plus a text edit): supervised CIR (CIRR/CIRPLANT, CLIP4Cir, candidate re-ranking), zero-shot CIR (Pic2Word, iSEARLE, CompoDiff) and training-free CIR (FREEDOM, weighted modality fusion). Written by Jiheon Kang during the deep daiv. multimodal track; converted from Notion.
 
-<details>
-<summary><b>🇰🇷 한국어 요약</b></summary>
-
-멀티모달 트랙에서 정리한 Composed Image Retrieval(참조 이미지 + 수정 텍스트로 원하는 이미지를 찾는 과제) 논문 8편의 목록입니다. 지도학습 기반 CIR, 레이블 없이 학습하는 zero-shot CIR, 추가 학습이 전혀 없는 training-free CIR 순서로 읽었습니다. 각 논문 노트는 아래 링크에서 볼 수 있습니다.
-
-</details>
-
 - 📄 [Image Retrieval on Real-life Images with Pre-trained Vision-and-Language Models](01_cirr_cirplant/README.md)
 
 - 📄 [Effective conditioned and composed image retrieval combining CLIP-based features](02_clip4cir/README.md)

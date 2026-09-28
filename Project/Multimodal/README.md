@@ -19,13 +19,6 @@
 > [!TIP]
 > **TL;DR** — In deep daiv.'s multimodal track (Nov 2024 – spring 2025), Jiheon reviewed VLM-hallucination, video-model and composed-image-retrieval papers, then led the **Video Temporal Grounding (VTG) research team**. The team's frame-level, training-free method, **FTF-VTG**, was accepted at the 2025 IEIE Summer Annual Conference with Jiheon as first author (reported: DiDeMo R@1 19.30, VidSTG mIoU 39.01, 788 MiB of GPU memory), and the topic returned in his newsletter issue #109 (Sep 2025).
 
-<details>
-<summary><b>🇰🇷 한국어 요약</b></summary>
-
-deep daiv.(딥다이브) 멀티모달 트랙에서의 활동 기록입니다. 트랙 과제로 VLM 환각(hallucination)을 다룬 M3ID 논문을 리뷰하며 시작했고, VideoMamba·TFVTG 같은 비디오 모델과 Composed Image Retrieval 논문 9편을 정리했습니다. 이후 Video Temporal Grounding 리서치 팀장을 맡아, 프레임과 문장의 유사도 곡선만으로 장면 구간을 찾는 학습 없는 방법 FTF-VTG를 만들었고, 이 연구는 2025 대한전자공학회 하계종합학술대회에 제1저자 논문으로 채택되었습니다. 비유하자면 영화를 끝까지 보지 않고 장면 사진마다 "이 문장과 얼마나 닮았나" 점수를 매긴 뒤, 점수가 치솟는 구간을 하이라이트로 고르는 방식입니다. 2025년 9월에는 같은 주제로 뉴스레터 #109 「AI는 어떻게 동영상 하이라이트를 만들까?」를 썼습니다. 트랙 동안 정리한 공부 노트(한국어)는 `notes/`에 있습니다.
-
-</details>
-
 | | |
 |---|---|
 | **Period** | Nov 2024 – spring 2025 — entry assignment Oct–Nov 2024 · study Nov–Dec 2024 · research early 2025 · paper at the IEIE Summer Annual Conference 2025 |

@@ -15,13 +15,6 @@
 > [!TIP]
 > **TL;DR** — The chatbot is built on **retrieval-augmented generation (RAG)**: instead of training one model per celebrity, GPT-4 Turbo (OpenAI Assistants API, `gpt-4-1106-preview`) retrieves facts from the person's Namuwiki page and speaks through one reusable persona prompt — goal, background, rules, few-shot lines and "false examples" — in a Streamlit chat. The RAG design went through two versions: crawling the page and fetching the section each question needs, then retrieval over the whole page with the Assistants API's `retrieval` tool once page layouts proved too inconsistent. In qualitative tests on four personas (three drama characters and actor Song Kang), retrieval kept the facts grounded — the Song Kang persona turns down peaches because of the allergy recorded on his page — and negative samples plus injected date, weather and news made replies noticeably more natural and context-aware.
 
-<details>
-<summary><b>🇰🇷 한국어 요약</b></summary>
-
-좋아하는 배우나 드라마 속 인물과 메신저처럼 대화할 수 있는 챗봇을 만든 deep daiv. NLP 트랜스포머 2팀(자양강장제)의 프로젝트입니다. 핵심은 **RAG(검색 증강 생성)** 적용이었습니다. 인물마다 모델을 새로 학습(파인튜닝)하는 대신, 인물의 나무위키 문서에서 필요한 사실을 검색해 GPT-4에 넣고, 어떤 인물에도 쓸 수 있는 일반화된 페르소나 프롬프트로 그 인물을 "연기"하게 했습니다. RAG는 두 번 설계했습니다. 처음에는 나무위키를 크롤링해 질문마다 필요한 목차 섹션을 찾아 넣는 방식을 만들었고(목차 제목·명사 빈도로 중요도를 판단하는 방법까지 시도), 문서 구조가 사람마다 너무 달라 문서 전체를 PDF로 올려 OpenAI Assistants API의 검색(retrieval) 기능으로 찾게 하는 방식으로 옮겼습니다. 배우 송강 페르소나가 문서에 적힌 복숭아 알레르기를 근거로 복숭아를 사양하는 등, 검색은 답을 사실에 묶어 두었습니다. 비유하자면 배우에게 새로 연기 수업을 시키는 대신, 인물 설명서(위키 문서)와 대본 몇 줄(대사 예시), 연기 지침(프롬프트)을 건네주는 방식입니다. 박연진(더 글로리), 성동일(응답하라 1988), 천지훈(천원짜리 변호사), 배우 송강 네 인물로 정성 평가했고, 사실은 검색이, 말투는 프롬프트가 맡는다는 역할 분담이 드러났습니다. 부정 예시(Negative sample)와 날짜·날씨·뉴스 정보를 넣을수록 대화가 더 자연스러워졌습니다. 저는 4인 팀의 팀장으로서 박연진 페르소나 프롬프트를 맡아 지침을 한 줄씩 고치며 실험 로그를 남겼고, "드라마 속 일을 실제로 겪은 본인"(9번)과 "긍정적·건설적일 필요 없음"(13번) 지침을 더해 페르소나가 훨씬 뚜렷해지는 것을 확인했습니다. 평가는 대화 기록을 읽고 판단한 정성 평가입니다.
-
-</details>
-
 | | |
 |---|---|
 | **Period** | Nov 2023 – Jan 2024 (paper study, then a project phase from Dec 2023; the demo prompt is set at the final seminar on 6 Jan 2024) |

@@ -13,13 +13,6 @@
 > [!TIP]
 > **TL;DR** — In deep daiv., each season pairs paper study in a domain track with a team project. Jiheon joined four tracks and **led the team in every one**: an LLM persona chatbot (NLP), a lightweight BU-Net for brain-tumour segmentation (Medical AI), the Taste Trip restaurant → café recommender (RecSys), and video temporal grounding research that became a **2025 IEIE Summer Annual Conference paper** (Multimodal). On the Contents Team he wrote as **에디터 져니** — three pieces for magazine vol.0 and nine issues of the weekly newsletter.
 
-<details>
-<summary><b>🇰🇷 한국어 요약</b></summary>
-
-deep daiv.는 분야별 트랙에서 논문을 함께 읽고 시즌마다 팀 프로젝트를 진행하며, 콘텐츠팀을 통해 AI 글을 발행하는 대학생 AI 학회입니다. 강지헌은 NLP → 의료 AI → 추천 시스템 → 멀티모달 네 트랙에 참여해 모든 팀에서 팀장을 맡았습니다. 좋아하는 배우·배역과 대화하는 GPT-4 페르소나 챗봇, 뇌종양 분할용 경량 BU-Net, 식당 다음 카페까지 이어 주는 맛집 추천 시스템 Taste Trip을 거쳐, 멀티모달 트랙의 비디오 시간 구간 탐색(VTG) 연구는 2025 대한전자공학회 하계종합학술대회 논문으로 이어졌습니다. 콘텐츠팀에서는 "에디터 져니"라는 필명으로 매거진 vol.0에 입문자용 글 세 편을 쓰고, 주간 뉴스레터 「위클리 딥 다이브」에 멀티모달 AI를 다룬 9편을 기고했습니다. 비유하자면 매 시즌 다른 바다(언어·의료·추천·영상)에 뛰어들어 팀을 이끌고, 돌아와서는 그 바닷속 이야기를 누구나 읽을 수 있게 전한 셈입니다.
-
-</details>
-
 ## 🌊 What deep daiv. is
 
 A student AI academic club organised in domain tracks (e.g. Transformer NLP, Medical AI, recommender systems, multimodal). A track starts with paper reviews and moves to a team project presented at the club's seminar; Jiheon kept *WIL* (What I Learned) study notes along the way. The **Contents Team** publishes the club's AI magazine and the weekly e-mail newsletter *위클리 딥 다이브*.

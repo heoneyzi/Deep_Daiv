@@ -4,13 +4,6 @@
 
 Jiheon's notes from the deep daiv. multimodal track (Oct 2024 – 2025), converted from Notion and kept in their original Korean. They follow the track in order: a hallucination paper for the entry assignment, video models, composed image retrieval, and the design notes of the team's own method, FTF-VTG. Each note is a folder whose `README.md` renders on GitHub, with its figures in `assets/`.
 
-<details>
-<summary><b>🇰🇷 한국어 요약</b></summary>
-
-deep daiv. 멀티모달 트랙에서 정리한 노트 모음입니다(원문 한국어). 트랙 과제였던 M3ID 환각 논문 리뷰, VideoMamba·TFVTG 비디오 모델 공부, Composed Image Retrieval 논문 9편, 그리고 팀 연구 FTF-VTG의 후처리·점수 설계 노트 순서로 정리했습니다. 노트 안의 그림은 리뷰한 논문에서 가져온 캡처입니다.
-
-</details>
-
 | # | Note | What it covers | When |
 |---|---|---|---|
 | 1 | [M3ID review](01_m3id_hallucination_review/README.md) | *Multi-Modal Hallucination Control by Visual Information Grounding* (CVPR 2024) — why VLMs drift from the image as captions grow (conditioning dilution), the prompt-dependency measure (PDM), and M3ID / M3ID+DPO decoding. Two versions: an easy-read walkthrough and a paper-format summary with the equations | Oct–Nov 2024 |

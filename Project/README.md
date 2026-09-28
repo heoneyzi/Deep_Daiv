@@ -6,13 +6,6 @@ Every deep daiv. season pairs a few weeks of paper study with a team project. Ji
 
 ![deep daiv.: projects](https://img.shields.io/badge/deep%20daiv.-projects-7c3aed?style=flat-square) ![role: Team Lead in every track](https://img.shields.io/badge/role-Team%20Lead%20in%20every%20track-334155?style=flat-square)
 
-<details>
-<summary><b>🇰🇷 한국어 요약</b></summary>
-
-deep daiv.에서는 시즌마다 논문 스터디 후 팀 프로젝트를 진행합니다. 강지헌은 참여한 모든 트랙에서 팀장을 맡았습니다. NLP 트랙에서는 좋아하는 배우·배역과 대화하는 GPT-4 페르소나 챗봇을, 추천시스템 트랙에서는 식당 다음에 근처 카페까지 이어 주는 지역 맛집 추천 시스템(Taste Trip)을, 멀티모달 트랙에서는 추가 학습 없이 영상 속 장면 구간을 찾는 비디오 시간 구간 탐색(VTG) 연구를 이끌었고 이는 2025 대한전자공학회 하계종합학술대회 논문으로 이어졌습니다. 마치 매 학기 다른 요리(언어·추천·영상)를 배우면서 매번 주방장 역할을 맡은 셈입니다. 의료 AI 트랙의 BU-Net 프로젝트는 Medical 폴더에 정리되어 있습니다.
-
-</details>
-
 <table>
 <tr>
 <td width="33%" valign="top">

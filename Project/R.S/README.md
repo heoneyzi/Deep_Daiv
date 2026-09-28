@@ -15,13 +15,6 @@
 > [!TIP]
 > **TL;DR** — The team crawled Naver Place reviews for **337 venues** around Mok-dong and Dangsan/Seonyudo in Seoul (204 restaurants, 133 cafés/dessert shops) plus the review histories of their most active reviewers, built a **51,705-user × 337-venue** score matrix, filled sparse users by similarity-based imputation, and implemented popularity, content-based (word2vec tag/category vectors), matrix-factorization and hybrid recommenders scored with Precision@5 / Recall@5. A Korean Streamlit prototype takes six quick ratings, then walks the user from a recommended restaurant to a café in the same area. The historical scores were not archived and have not been reproduced, so no accuracy is claimed.
 
-<details>
-<summary><b>🇰🇷 한국어 요약</b></summary>
-
-목동·당산·선유도 일대에서 "밥 먹고 어느 카페를 갈까?"까지 한 번에 골라 주는 지역 맛집·카페 추천 시스템을 만든 deep daiv. 추천시스템 트랙 프로젝트입니다. 네이버 플레이스에서 리뷰가 많은 가게 337곳(식사 204곳, 디저트 133곳)과 그 가게 리뷰어들의 다른 리뷰 이력을 Selenium으로 수집해, 51,705명 × 337곳의 사용자-가게 점수 행렬을 만들었습니다. 리뷰가 1~4개뿐인 사용자는 비슷한 가게의 점수를 채워 넣는 방식(유사도 기반 대치)으로 희소성을 줄였고, 인기도 기반·콘텐츠 기반(리뷰 키워드/카테고리 word2vec 벡터)·행렬 분해(MF)·하이브리드 추천을 Precision@5/Recall@5로 평가하도록 구현했습니다. 비유하자면 "나와 입맛이 비슷한 단골들이 자주 간 집"(협업 필터링)과 "내가 좋아한 가게와 분위기·메뉴가 닮은 집"(콘텐츠 기반)을 함께 보는 셈입니다. 저는 팀장으로서 3단계 크롤러(가게 → 리뷰 → 리뷰어 이력)를 만들고 태그 수집 방식을 바꿔 실행 시간을 9분 20초에서 약 4분 20초로 줄였으며, 코드를 GitHub에 정리해 공개했습니다. 당시의 평가 점수는 남아 있지 않아 성능 수치는 주장하지 않습니다.
-
-</details>
-
 | | |
 |---|---|
 | **Period** | Summer 2024 (crawling notes include photos dated 12 Aug 2024) · code published to GitHub Apr 2025 · restored with provenance docs Sep 2026 |
