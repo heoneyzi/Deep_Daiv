@@ -1,0 +1,59 @@
+name: Remove Korean summary sections
+on:
+  push:
+    branches: [main]
+    paths: [.github/workflows/remove-korean-summaries.yml]
+permissions:
+  contents: write
+jobs:
+  update:
+    if: github.repository == 'heoneyzi/Deep_Daiv'
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+      - name: Apply the reviewed Markdown-only edits
+        shell: bash
+        run: |
+          python3 - <<'PYCODE'
+          from pathlib import Path
+          import hashlib, json, subprocess
+          import re
+          LABEL=re.compile(r'한국어\s*요약|국문\s*요약|korean\s*summary',re.I)
+          DETAILS=re.compile(r'<details\b[^>]*>.*?</details>',re.I|re.S)
+          HEAD=re.compile(r'^(#{1,6})[ \t]+(.+?)[ \t]*$',re.M)
+          def clean(text):
+              def drop(m):
+                  summary=re.search(r'<summary\b[^>]*>(.*?)</summary>',m.group(),re.I|re.S)
+                  return '' if summary and LABEL.search(summary.group(1)) else m.group()
+              new=DETAILS.sub(drop,text)
+              headings=list(HEAD.finditer(new));remove=[]
+              for i,h in enumerate(headings):
+                  if not LABEL.search(h.group(2)):continue
+                  end=next((x.start() for x in headings[i+1:] if len(x.group(1))<=len(h.group(1))),len(new))
+                  remove.append((h.start(),end))
+              for a,b in reversed(remove):new=new[:a]+new[b:]
+              if new!=text:new=re.sub(r'\n{3,}','\n\n',new)
+              return new
+
+          expected={'Contents/Magazine/README.md': {'before': '9c3487e6311c872f6215968c9f9ca403b4b712783f81853bc94373cfccf9c29f', 'after': 'c1cdc09feb4ea48ca7130493629071c157d0ee4bb80fae29327105731de7a168'}, 'Contents/NewsLetter/README.md': {'before': 'fe325299dad09fb02cd58fe603dfad0d40903348b27d32967780a1601daee54e', 'after': 'cd2ac3dcc5c78b1053ada61ba3d4371bb0eda7721f4128671b1631fe1a2e7447'}, 'Contents/README.md': {'before': '0376eea5433246fd780987a182990fb16539542201d6ab5771bd3420fa5274ae', 'after': '6c2bda49a425baa231685ef9498a788c98cf5b1e095ec13477ebba5ae380a8db'}, 'Project/Multimodal/README.md': {'before': '4a0938bae3bc5be16e5e617b2f879a40c7d42a5a7e34f8d36a7600a69aef3001', 'after': 'dc9d7b51ad98a16e16dd599b6eebb6925a51eabdc1cb80f57a6d082888aa85e5'}, 'Project/Multimodal/notes/05_cir_survey/README.md': {'before': '067fa0400aaec1acc055744ac92f54d464008222edc7e511bc465bd183e8faee', 'after': '9e2793c72377aa3317e578cb212a7941165c0db0dba2cde53968cf5b3fb1cec6'}, 'Project/Multimodal/notes/README.md': {'before': '33b2610ae1da0693577b622ffd73f209a34399741cbc0241bd70ea1997b45564', 'after': '47bb07ea0fada8412cdd21cebb6b649d7b766872c9e14bcc827f813f95a9a327'}, 'Project/NLP/README.md': {'before': 'b87362a8bf2b91c4cd9b57a1932efa80a06b7728f95adf43b12c10baabb2e66c', 'after': 'fd0463e316b2ff8496c91c6c6db8901317b05dedcb0ca76fc3ba093ae9b9e2be'}, 'Project/R.S/README.md': {'before': '6a6aac4908890befa74ba3ff843fa2ceb830f23da6df2b1d95239c73b46475d1', 'after': '8d8c993186c9950afa078be10f447ef3088e0bc51ccc202e5abbe98073095cf0'}, 'Project/README.md': {'before': '3b06e3ecb8abc916eb393af9f8caa97876e06351ff310e8c0b6305e16e1555ef', 'after': '85b9a9039bb08b8feb914491cd564fbb130889ddc579b89b5b7a9e0aa7bead17'}, 'README.md': {'before': '4bba1f73baec92b15ce2567f611ca355d50c4c2e6b440681d13b9d434fec9e13', 'after': '67a14da3317d6355454698aebbf6f043b24cc42f6303903d2a4ee5f390015156'}}
+          assert subprocess.check_output(['git','remote','get-url','origin'],text=True).strip().removesuffix('.git').endswith('/heoneyzi/Deep_Daiv')
+          changed=[]
+          for name in subprocess.check_output(['git','ls-files','-z']).decode().split('\0'):
+              if not name or Path(name).suffix.lower()!='.md':continue
+              p=Path(name);before=p.read_bytes();after=clean(before.decode()).encode()
+              if after==before:continue
+              assert name in expected, f'Unreviewed change: {name}'
+              assert hashlib.sha256(before).hexdigest()==expected[name]['before'], f'Source changed: {name}'
+              assert hashlib.sha256(after).hexdigest()==expected[name]['after'], f'Unexpected result: {name}'
+              p.write_bytes(after);changed.append(name)
+          assert set(changed)==set(expected), 'Expected changes missing'
+          subprocess.run(['git','config','user.name','github-actions[bot]'],check=True)
+          subprocess.run(['git','config','user.email','41898282+github-actions[bot]@users.noreply.github.com'],check=True)
+          subprocess.run(['git','add','--',*changed],check=True)
+          subprocess.run(['git','commit','-m','Remove Korean summary sections from Markdown documentation'],check=True)
+          subprocess.run(['git','push','origin','HEAD:main'],check=True)
+          print('Removed Korean summary sections from',len(changed),'Markdown files.')
+          PYCODE
